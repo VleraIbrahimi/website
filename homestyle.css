@@ -106,27 +106,44 @@ nav.nav-menu ul li a {
   text-align: left;
   margin: 0;
 }
+.featured-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.featured-item1 {
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
 
 .featured-item1 img {
-  width:125px;
-  height: auto;
+  width: 125px;
+  height: 125px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #f7f7f7;
+  padding: 12px;
+  transition: transform 0.25s ease;
 }
 
-.featured-item1 h4{
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+.featured-item1 h4 {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
 }
 
-.featured-item2 img {
-  width:125px;
-  height: auto;
+/* Hover Efekti */
+.featured-item1:hover img {
+  transform: scale(1.08);
 }
 
-.featured-item2 h4{
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+.featured-item1:hover {
+  transform: translateY(-6px);
 }
-
 
 /* About */
 .about {
