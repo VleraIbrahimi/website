@@ -1,0 +1,48 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.section{
+    width:100% ;
+    padding: 60px 0;
+    background-color:white;
+}
+.container{
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 100px;
+}
+.teksti{
+    float: left;
+    width: 55%;
+    padding-right: 30px;
+}
+.imazhi{
+    float: right;
+    width: 40%;
+    margin-top: 30px;
+}
+.imazhi img{
+    width: 100%;
+    height:auto;
+}
+
+.teksti .titulli{
+    text-transform: uppercase;
+    font-size: 28px;
+}
+
+.teksti .pershkrimi p{
+    margin-top: 20px;
+    font-size: 17px;
+    line-height: 1.5;
+
+}
+.teksti .pershkrimi h4{
+    margin-top: 10px;
+    color: #dfe2d3;
+    font-size: 20px;
+}

@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.product-page {
+  width: 80%;
+  margin: 60px auto;
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* ===== IMAGE ===== */
+.imazhi {
+  flex: 1;
+}
+
+.imazhi img {
+  width: 100%;
+  max-width: 520px;
+  display: block;
+}
+
+/* ===== INFO ===== */
+.info {
+  flex: 1;
+}
+
+.info h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* ===== PRICE ===== */
+.cmimi {
+  margin-bottom: 20px;
+}
+
+.cmimi .price {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* ===== DESCRIPTION ===== */
+#pershkrimi {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 25px;
+  max-width: 500px;
+}
+
+/* ===== QUANTITY ===== */
+.butonat {
+  display: flex;
+  align-items: center;
+  width: 180px;
+  border: 1px solid #d97c5f;
+  margin-bottom: 20px;
+}
+
+.butonat button {
+  width: 50px;
+  height: 45px;
+  border: none;
+  background: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.butonat input {
+  width: 80px;
+  height: 45px;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* ===== ADD TO CART ===== */
+.cart {
+  width: 100%;
+  max-width: 360px;
+  padding: 15px;
+  background-color: #d97c5f;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.cart:hover {
+  background-color: #c66c52;
+}
+
+

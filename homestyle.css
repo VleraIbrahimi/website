@@ -9,17 +9,6 @@ body {
   line-height: 1.6;
 }
 
-.featured1{
-  margin-top: 100px;
-}
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
 /* Header */
 header {
   background: #fff;
@@ -37,9 +26,11 @@ header {
 }
 nav.nav-menu ul {
   list-style: none;
-  display: flex !important;
-  gap: 30px !important;  
+  display: flex ;
+  gap:100px;  
   align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
 nav.nav-menu ul li a {
@@ -47,57 +38,50 @@ nav.nav-menu ul li a {
   color: black;
   font-weight: 500;
 }
-.nav-menu ul li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
-.header-actions .cart {
-  text-decoration: none;
-  color: #333;
-  font-size: 16px;
-}
 
-.features{
+.metodat{
   display: flex;
   justify-content: space-between;
   gap: 5px;
   align-items: center;
 }
 
-.features >div{
+.metodat >div{
   text-align: center;
 }
 
-.features img{
+.metodat img{
   width: 45px;
   text-align: center;
 }
 
-.features span{
+.metodat span{
   font-size:15px;
 
 }
+.metodat a{
+  text-decoration: none;
+  color: black;
+}
 
-/* Featured */
-.featured {
+.kategoria {
   padding: 60px 0;
   text-align: center;
 }
-.featured h2 {
+.kategoria h2 {
   margin-bottom: 40px;
   font-size: 32px;
 }
-.featured-grid {
+.kategoria-grid {
   display: flex;
   gap: 30px;
   justify-content: center;
 }
-.featured-item {
+.kategoria-item {
   flex: 1;
   max-width: 300px;
 }
-.featured-item img {
+.kategoria-item img {
   width: 100%;
   border-radius: 20px;
 }
@@ -107,59 +91,31 @@ nav.nav-menu ul li a {
   margin: 0;
 }
 
-.featured-item1 img {
-  width:125px;
-  height: auto;
+.rrethore h4:first-of-type {
+  white-space: nowrap; /* Bën që titulli kryesor të jetë në një rresht */
+  margin-top: 150px;
 }
 
-.featured-item1 h4{
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.featured-item2 img {
-  width:125px;
-  height: auto;
-}
-
-.featured-item2 h4{
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-
-/* About */
-.about {
-  padding: 60px 0;
+.rrethore-grid {
   display: flex;
+  justify-content: space-between; /* ose space-around, varësisht nga çfarë don */
+  gap:1px; /* hapësira mes elementeve */
+  flex-wrap: nowrap; /* gjithë elementet në një rresht */
+}
+
+.rrethore-item {
+  text-align: center;
+  flex: 1; /* secili merr hapësirë të barabartë */
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 50px;
 }
-.about-text {
-  flex: 1;
+
+.rrethore-item h4 {
+  margin-bottom: 10px; /* h4 poshtë fotos */
+  white-space: normal; /* Nëse titulli është i gjatë, thyen linjat */
 }
-.about-text h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-.about-text p {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-.btn-secondary {
-  background-color: #555;
-  color: #fff;
-  padding: 10px 25px;
-  text-decoration: none;
-  border-radius: 5px;
-}
-.about-image {
-  flex: 1;
-}
-.about-image img {
-  width: 100%;
-  border-radius: 10px;
-}
+
 
 /* Products */
 .products {
@@ -226,7 +182,7 @@ width: 1510px;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: #ce8f8f;
+  background-color:#dfe2d3;
 }
 
 .footer{
@@ -235,21 +191,24 @@ justify-content: space-between;
 align-items:center ;
 padding: 40px;
 height: 300px;
+
 }
 
 .footer a{
 text-decoration: none;
 color: black;
 }
-
 #footer-inn{
   display: flex;
   justify-content: center;
-  text-align: center;
+  text-align: left;
 }
-
 #footer-inn a{
   text-decoration: none;
   color: black;
+}
+
+.footer-inner p{
+  text-align: left;
 }
 
