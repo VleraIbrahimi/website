@@ -27,9 +27,29 @@
 
   <div class="carousel">
   <img src="carosel3.png" class="active">
-  <img src="">
-  <img src="">
+  <img src="carosel2.jpg">
+  <img src="carosel1.png">
 </div>
+
+ <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll('.carousel img');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    }
+
+    setInterval(nextSlide, 3000);
+  });
+</script>
 
 
 
@@ -136,7 +156,7 @@
   <!-- Products / New Arrivals -->
   <section class="products">
     <div class="container">
-      <h2>New Arrivals</h2>
+      <h2>Arritje te reja</h2>
 
       <div class="products-grid">
         <div class="product-card">

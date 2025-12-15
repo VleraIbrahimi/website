@@ -1,48 +1,163 @@
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.section{
-    width:100% ;
-    padding: 60px 0;
-    background-color:white;
-}
-.container{
-    width: 80%;
-    display: block;
-    margin: auto;
-    padding-top: 100px;
-}
-.teksti{
-    float: left;
-    width: 55%;
-    padding-right: 30px;
-}
-.imazhi{
-    float: right;
-    width: 40%;
-    margin-top: 30px;
-}
-.imazhi img{
-    width: 100%;
-    height:auto;
+/* ===== HEADER & NAVBAR ===== */
+header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 0 15px;
 }
 
-.teksti .titulli{
-    text-transform: uppercase;
-    font-size: 28px;
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
 }
 
-.teksti .pershkrimi p{
+.logo img {
+  max-height: 60px;
+  display: block;
+}
+
+/* Menuja */
+nav.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+nav.nav-menu ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+nav.nav-menu ul li a:hover {
+  color: #d97c5f;
+}
+
+/* ===== SEKCIONI MAIN ===== */
+.section {
+  background-color:#fff;
+  padding: 60px 0;
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.teksti {
+  flex: 1 1 55%;
+}
+
+.imazhi {
+  flex: 1 1 40%;
+}
+
+.imazhi img {
+  width: 100%;
+  height:auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Teksti */
+.teksti .titulli {
+  text-transform: uppercase;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.teksti .pershkrimi p {
+  font-size: 17px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.teksti .pershkrimi h4 {
+  font-size: 20px;
+  color: #ddd;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .teksti, .imazhi {
+    flex: 1 1 100%;
+  }
+  .imazhi {
     margin-top: 20px;
-    font-size: 17px;
-    line-height: 1.5;
-
+  }
 }
-.teksti .pershkrimi h4{
-    margin-top: 10px;
-    color: #dfe2d3;
-    font-size: 20px;
+
+#main-footer {
+  background-color: #dfe2d3;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer-inner p {
+  color: #333;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+#footer-inn {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#footer-inn a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+#footer-inn a:hover {
+  color: #d97c5f;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #footer-inn {
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
 }
