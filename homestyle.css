@@ -38,6 +38,24 @@ nav.nav-menu ul li a {
   color: black;
   font-weight: 500;
 }
+/* HEADER ICONS*/
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-icons i {
+  font-size: 20px;
+  color: #000;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.header-icons i:hover {
+  color: #007bff;
+}
+
 
  * {
   margin: 0;
@@ -137,6 +155,7 @@ nav.nav-menu ul li a {
   padding: 40px 0;
   background-color: #fff;
 }
+<<<<<<< Updated upstream
 
 
 .featured-item1 img {
@@ -189,6 +208,9 @@ nav.nav-menu ul li a {
 
 .rrethore-grid {
 >>>>>>> f1198fa54c9e401ae9b80e4f01abc1021525c546
+=======
+   .rrethore-grid{
+>>>>>>> Stashed changes
   display: flex;
   justify-content: center;
   gap: 40px;
