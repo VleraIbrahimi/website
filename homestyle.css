@@ -39,6 +39,42 @@ nav.nav-menu ul li a {
   font-weight: 500;
 }
 
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* KARUSELI */
+.carousel {
+  width: 1510px;       /* gjerësia që dëshiron */
+  max-width: 100%;     /* për responsive */
+  height: 600px;       /* po e ruaj lartësinë tënde */
+  margin:1px auto 40px auto;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.carousel img {
+  width: 1510px;       /* imazhet me gjerësinë që do */
+  max-width: 100%;     /* responsive */
+  height: 600px;       /* përshtatet me carousel */
+  object-fit: cover;
+  position: absolute;
+  top: 0; left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel img.active {
+  opacity: 1;
+  position: relative;
+}
+
+
+
 .metodat{
   display: flex;
   justify-content: space-between;
@@ -97,13 +133,12 @@ nav.nav-menu ul li a {
   flex-wrap: wrap;
 }
 
-.featured-item1 {
-  text-align: center;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  cursor: pointer;
+.rrethore {
+  padding: 40px 0;
+  background-color: #fff;
 }
 
-<<<<<<< HEAD
+
 .featured-item1 img {
   width: 125px;
   height: 125px;
@@ -141,24 +176,50 @@ nav.nav-menu ul li a {
 
 .rrethore-grid {
 >>>>>>> 31cfd7e056e61896b260d2d8a532fcfbe20837d9
+=======
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.rrethore .teksti{
+  text-align:center;
+  margin-top: 50px;
+}
+
+.rrethore-grid {
+>>>>>>> f1198fa54c9e401ae9b80e4f01abc1021525c546
   display: flex;
-  justify-content: space-between; /* ose space-around, varësisht nga çfarë don */
-  gap:1px; /* hapësira mes elementeve */
-  flex-wrap: nowrap; /* gjithë elementet në një rresht */
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
 .rrethore-item {
-  text-align: center;
-  flex: 1; /* secili merr hapësirë të barabartë */
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 160px;
+  text-align: center;
 }
 
-.rrethore-item h4 {
-  margin-bottom: 10px; /* h4 poshtë fotos */
-  white-space: normal; /* Nëse titulli është i gjatë, thyen linjat */
+.rrethore-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
 }
+
+.rrethore-item h4 p{
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #555;
+  white-space: normal;
+  margin: 0;
+}
+
+
+
 
 
 /* Products */
@@ -167,7 +228,7 @@ nav.nav-menu ul li a {
 }
 .products h2 {
   text-align: center;
-  font-size: 32px;
+  font-size: 25px;
   margin-bottom: 40px;
 }
 .products-grid {
@@ -226,7 +287,7 @@ width: 1510px;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color:#dfe2d3;
+  background-color:#d97c5f;
 }
 
 .footer{

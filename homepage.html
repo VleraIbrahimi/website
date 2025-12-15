@@ -27,9 +27,29 @@
 
   <div class="carousel">
   <img src="carosel3.png" class="active">
-  <img src="">
-  <img src="">
+  <img src="carosel2.jpg">
+  <img src="carosel1.png">
 </div>
+
+ <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll('.carousel img');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    }
+
+    setInterval(nextSlide, 3000);
+  });
+</script>
 
 
 
@@ -43,7 +63,9 @@
     <!----cicrcle1-->
   <section class="rrethore">
     <div class="container">
-      <h4>Artikuj të domosdoshëm, <br>të përzgjedhur çdo muaj</h4>
+      <div class="teksti">
+      <h4>Artikuj të domosdoshëm,<br> të përzgjedhur çdo muaj</h4>
+      </div>
       <div class="rrethore-grid">
         <div class="rrethore-item">
           <img src="hidratues.png" alt="Category 1" />
@@ -58,16 +80,15 @@
           <h4>Paste dhembesh</h4>
         </div>
 
-        <div class="featured-item1">
+        <div class="rrethore-item">
         <img src="shampo.png" alt="Category 4" />
         <h4>Shampo</h4>
       </div>
 
-      <div class="featured-item1">
+      <div class="rrethore-item">
         <img src="skincare.png" alt="Category 5" />
         <h4>Skincare</h4>
       </div>
-      
       </div>
     </div>
   </section>
@@ -103,18 +124,32 @@
     <div class="container">
     <h4>Artikuj të domosdoshëm,<br> të përzgjedhur çdo muaj</h4>
       <div class="rrethore-grid">
+
         <div class="rrethore-item">
           <img src="bath time.png" alt="Category 1" />
           <h4>Bath Time</h4>
         </div>
+
         <div class="rrethore-item">
           <img src="diapers.png" alt="Category 2" />
-          <h4>Diapers</h4>
+          <h4>Pelena</h4>
         </div>
+
         <div class="rrethore-item">
           <img src="breastfeading.png" alt="Category 3" />
-          <h4>Breastfeading</h4>
+          <h4>Gjidhenie</h4>
         </div>
+
+        <div class="rrethore-item">
+          <img src="shendeti.png" alt="Category 3" />
+          <h4>Shendeti</h4>
+        </div>
+
+        <div class="rrethore-item">
+          <img src="foodprep.png" alt="Category 3" />
+          <h4>Food Prep</h4>
+        </div>
+
       </div>
     </div>
   </section>
@@ -147,7 +182,7 @@
   <!-- Products / New Arrivals -->
   <section class="products">
     <div class="container">
-      <h2>New Arrivals</h2>
+      <h2>Arritje te reja</h2>
 
       <div class="products-grid">
         <div class="product-card">
