@@ -1,6 +1,6 @@
  body {
             font-family: Arial, sans-serif;
-            background:white;
+            background:rgb(255, 255, 255);
             margin: 0;
             padding: 0;
         }
@@ -29,6 +29,10 @@
             background: white;
             padding: 15px;
             text-align: center;
+        }
+        .product-card a{
+            text-decoration: none;
+            color: black;
         }
         .product-card img {
             width: 60%;
@@ -61,7 +65,8 @@ font-size: 14px;
 
         }
         .search-bar input {
-            width: 250px;
+            flex: 1;
+            max-width:800px;
             padding: 10px;
             border-radius: 5px;
             border: 1px solid #ccc;
@@ -71,7 +76,7 @@ font-size: 14px;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
-            background: #e19dd3;
+            background:#d97c5f;
             color: white;
             font-size: 14px;
             cursor: pointer;
