@@ -5,6 +5,35 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+header {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 0 15px ;
+    }
+    .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    }
+    .logo img {
+    text-align: left;
+    }
+    nav.nav-menu ul {
+    list-style: none;
+    display: flex ;
+    gap:100px;  
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    }
+
+    nav.nav-menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    }
+
 .product-page {
   width: 80%;
   margin: 60px auto;
@@ -95,6 +124,60 @@
 
 .cart:hover {
   background-color: #c66c52;
+}
+
+
+#main-footer {
+  background-color: #dfe2d3;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer-inner p {
+  color: #333;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+#footer-inn {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#footer-inn a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+#footer-inn a:hover {
+  color: #d97c5f;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #footer-inn {
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
 }
 
 
