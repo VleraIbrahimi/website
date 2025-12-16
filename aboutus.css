@@ -46,6 +46,13 @@ nav.nav-menu ul li a:hover {
   color: #d97c5f:
 }
 
+@media (max-width: 768px) {
+  nav.nav-menu ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
 /* ===== SEKCIONI MAIN ===== */
 .section {
   background-color:#fff;

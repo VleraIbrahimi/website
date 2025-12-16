@@ -42,7 +42,6 @@ header {
   align-items: flex-start;
 }
 
-/* ===== IMAGE ===== */
 .imazhi {
   flex: 1;
 }
@@ -53,7 +52,6 @@ header {
   display: block;
 }
 
-/* ===== INFO ===== */
 .info {
   flex: 1;
 }
@@ -64,7 +62,6 @@ header {
   font-weight: 600;
 }
 
-/* ===== PRICE ===== */
 .cmimi {
   margin-bottom: 20px;
 }
@@ -74,7 +71,6 @@ header {
   font-weight: bold;
 }
 
-/* ===== DESCRIPTION ===== */
 #pershkrimi {
   font-size: 15px;
   line-height: 1.7;
@@ -83,7 +79,6 @@ header {
   max-width: 500px;
 }
 
-/* ===== QUANTITY ===== */
 .butonat {
   display: flex;
   align-items: center;
@@ -109,7 +104,6 @@ header {
   font-size: 16px;
 }
 
-/* ===== ADD TO CART ===== */
 .cart {
   width: 100%;
   max-width: 360px;

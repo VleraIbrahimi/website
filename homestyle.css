@@ -156,27 +156,14 @@ nav.nav-menu ul li a {
   color: #333;
 }
 
-/* Hover Efekti */
-.featured-item1:hover img {
-  transform: scale(1.08);
-}
 
-.featured-item1:hover {
-  transform: translateY(-6px);
-}
 
-/* About */
-.about {
-  padding: 60px 0;
-=======
 .rrethore h4:first-of-type {
   white-space: nowrap; /* Bën që titulli kryesor të jetë në një rresht */
   margin-top: 150px;
 }
 
 .rrethore-grid {
->>>>>>> 31cfd7e056e61896b260d2d8a532fcfbe20837d9
-=======
 .container {
   width: 90%;
   max-width: 1200px;
