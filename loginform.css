@@ -36,7 +36,10 @@ header {
   display: flex;
   gap:78px;
 }
-
+.nav-menu ul li a{
+  text-decoration: none;
+  color: black;
+}
 
 .nav-menu ul li a::after {
   content: "";

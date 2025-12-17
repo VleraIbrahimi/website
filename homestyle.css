@@ -95,7 +95,7 @@ nav.nav-menu ul li a:hover {
 
 
 
-.metodat{
+/* .metodat{
   display: flex;
   justify-content: space-between;
   gap: 5px;
@@ -118,7 +118,48 @@ nav.nav-menu ul li a:hover {
 .metodat a{
   text-decoration: none;
   color: black;
+} */
+.metodat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 1400px;
+  margin: 40px auto;
+  padding: 25px 20px;
 }
+
+.metod-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+}
+
+.metod-item img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  opacity: 0.6; /* ikonë si në foto */
+}
+
+.metod-item span {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #000;
+}
+
+.metod-item a {
+  text-decoration: none;
+  color: #000;
+}
+
+.metod-item a:hover {
+  text-decoration: underline;
+}
+
+
+
 
 .kategoria {
   padding: 60px 0;
@@ -162,8 +203,47 @@ nav.nav-menu ul li a:hover {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+} 
+/* RRETHORE */
+.rrethore {
+  padding: 60px 0;
 }
-.rrethore .teksti{
+
+.rrethore-layout {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.teksti {
+  min-width: 260px;
+  text-align: left;
+}
+
+.rrethore-grid {
+  display: flex;
+  gap: 40px;
+}
+
+.rrethore-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rrethore-item h4 {
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.rrethore-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+/* .rrethore .teksti{
   text-align:center;
   margin-top: 50px;
 }
@@ -196,7 +276,7 @@ nav.nav-menu ul li a:hover {
   color: #555;
   white-space: normal;
   margin: 0;
-}
+} */
 
 .products {
   padding: 60px 0;
@@ -232,6 +312,10 @@ nav.nav-menu ul li a:hover {
   font-size: 18px;
   margin-bottom:10px;
   text-align: center;
+}
+.product-card a{
+  text-decoration: none;
+  color: black;
 }
 
 .video-grid {
@@ -290,4 +374,127 @@ color: black;
 
 .footer-inner p{
   text-align: left;
+}
+@media (max-width: 768px) {
+
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 15px;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+
+  nav.nav-menu {
+    width: 100%;
+  }
+
+  nav.nav-menu ul {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  nav.nav-menu ul li a {
+    font-size: 14px;
+  }
+
+  .header-icons {
+    gap: 18px;
+  }
+
+  .carousel {
+    height: 300px;
+    margin-bottom: 20px;
+  }
+
+  .carousel img {
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .metodat {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .metod-item {
+    justify-content: center;
+  }
+
+  .rrethore-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .teksti {
+    text-align: center;
+  }
+
+  .rrethore-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .rrethore-item {
+    width: 140px;
+  }
+
+  .kategoria-grid {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .kategoria-item {
+    max-width: 100%;
+  }
+
+  .products-grid {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .product-card {
+    width: 100%;
+  }
+
+  .product-card p {
+    font-size: 16px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    height: auto;
+  }
+
+  #footer-inn {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav.nav-menu ul {
+    flex-wrap: wrap;
+  }
+
+  .rrethore-item {
+    width: 120px;
+  }
+
+  .carousel {
+    height: 220px;
+  }
+
+  .carousel img {
+    height: 220px;
+  }
 }
