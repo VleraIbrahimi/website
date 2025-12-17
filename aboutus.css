@@ -7,51 +7,60 @@
 
 header {
   background: #fff;
-  border-bottom: 1px solid #eee;
-  padding: 0 15px;
+  border-bottom: 1px solid #e5e5e5;
+  width: 100%;
 }
 
 .header-inner {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-  min-height: 60px;
-}
-nav.nav-menu {
-  height: 60px;      
+  padding: 15px 30px;
+
   display: flex;
   align-items: center;
 }
 
 .logo img {
-  max-height: 60px;
-  display: block;
+  height:60px;
+  object-fit: contain;
 }
 
-nav.nav-menu ul {
+.nav-menu {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-menu ul {
   list-style: none;
-  display:flex;
-  height:auto;
-  gap: 60px;
-  align-items: center;
-  padding: 0;
-  margin: 0;
+  display: flex;
+  gap:78px;
 }
 
-nav.nav-menu ul li a {
+.nav-menu ul li a {
   text-decoration: none;
-  color: black;
+  color: #000;
+  font-size: 15px;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 60px;
+  padding-bottom: 5px;
+  position: relative;
 }
 
-nav.nav-menu ul li a:hover {
-  color: #d97c5f;
+.header-icons {
+  display: flex;
+  gap: 25px;
+  align-items: center;
 }
+
+.header-icons i {
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+ nav.nav-menu ul li a:hover {
+  color: #d97c5f;
+} 
 
 .section {
   background-color: #fff;

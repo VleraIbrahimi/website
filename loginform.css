@@ -5,44 +5,66 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-
 header {
   background: #fff;
-  border-bottom: 1px solid #eee;
-  padding: 0 15px;
+  border-bottom: 1px solid #e5e5e5;
+  width: 100%;
 }
 
 .header-inner {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 15px 30px;
+
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
 }
 
 .logo img {
-  max-height: 60px;
-  display: block;
+  height:60px;
+  object-fit: contain;
 }
 
-nav.nav-menu ul {
+.nav-menu {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-menu ul {
   list-style: none;
   display: flex;
-  gap: 60px;
+  gap:78px;
+}
+
+
+.nav-menu ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #66c7b0;
+  left: 0;
+  bottom: 0;
+  transition: 0.3s;
+}
+
+.header-icons {
+  display: flex;
+  gap: 25px;
   align-items: center;
 }
 
-nav.nav-menu ul li a {
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-  font-size: 16px;
+.header-icons i {
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-nav.nav-menu ul li a:hover {
+ nav.nav-menu ul li a:hover {
   color: #d97c5f;
-}
+} 
 
 .login-wrapper {
   display: flex;
