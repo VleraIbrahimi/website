@@ -2,14 +2,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
 body {
-  font-family: Arial, sans-serif;
   color: #333;
   line-height: 1.6;
 }
 
-/* Header */
 header {
   background: #fff;
   border-bottom: 1px solid #eee;
@@ -38,37 +37,10 @@ nav.nav-menu ul li a {
   color: black;
   font-weight: 500;
 }
-/* HEADER ICONS*/
-.header-icons {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.header-icons i {
-  font-size: 20px;
-  color: #000;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.header-icons i:hover {
-  color: #007bff;
-}
-
-
- * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* KARUSELI */
 .carousel {
-  width: 1510px;       /* gjerësia që dëshiron */
-  max-width: 100%;     /* për responsive */
-  height: 600px;       /* po e ruaj lartësinë tënde */
+  width: 1510px;      
+  max-width: 100%;     
+  height: 600px;      
   margin:1px auto 40px auto;
   overflow: hidden;
   position: relative;
@@ -76,9 +48,9 @@ nav.nav-menu ul li a {
 }
 
 .carousel img {
-  width: 1510px;       /* imazhet me gjerësinë që do */
-  max-width: 100%;     /* responsive */
-  height: 600px;       /* përshtatet me carousel */
+  width: 1510px;       
+  max-width: 100%;     
+  height: 600px;       
   object-fit: cover;
   position: absolute;
   top: 0; left: 0;
@@ -155,34 +127,7 @@ nav.nav-menu ul li a {
   padding: 40px 0;
   background-color: #fff;
 }
-<<<<<<< Updated upstream
 
-
-.featured-item1 img {
-  width: 125px;
-  height: 125px;
-  object-fit: cover;
-  border-radius: 50%;
-  background: #f7f7f7;
-  padding: 12px;
-  transition: transform 0.25s ease;
-}
-
-.featured-item1 h4 {
-  margin-top: 10px;
-  font-size: 18px;
-  font-weight: 600;
-  color: #333;
-}
-
-
-
-.rrethore h4:first-of-type {
-  white-space: nowrap; /* Bën që titulli kryesor të jetë në një rresht */
-  margin-top: 150px;
-}
-
-.rrethore-grid {
 .container {
   width: 90%;
   max-width: 1200px;
@@ -194,10 +139,6 @@ nav.nav-menu ul li a {
 }
 
 .rrethore-grid {
->>>>>>> f1198fa54c9e401ae9b80e4f01abc1021525c546
-=======
-   .rrethore-grid{
->>>>>>> Stashed changes
   display: flex;
   justify-content: center;
   gap: 40px;
@@ -227,11 +168,6 @@ nav.nav-menu ul li a {
   margin: 0;
 }
 
-
-
-
-
-/* Products */
 .products {
   padding: 60px 0;
 }
@@ -270,8 +206,8 @@ nav.nav-menu ul li a {
 
 .video-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 video në një rresht */
-    gap: 15px; /* hapësira mes tyre */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px; 
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -326,3 +262,41 @@ color: black;
   text-align: left;
 }
 
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 15px;
+  }
+
+  nav.nav-menu ul {
+    flex-direction: row;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav.nav-menu ul li a {
+    font-size: 14px;
+    line-height: normal;
+  }
+
+  nav.nav-menu {
+    height: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #footer-inn {
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+}

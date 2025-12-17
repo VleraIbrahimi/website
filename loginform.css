@@ -2,10 +2,10 @@ body {
   margin: 0;
   min-height: 100vh;
   background-color: rgba(255, 255, 255, 0.75);
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
-/* ===== HEADER ===== */
+
 header {
   background: #fff;
   border-bottom: 1px solid #eee;
@@ -26,7 +26,6 @@ header {
   display: block;
 }
 
-/* ===== MENU ===== */
 nav.nav-menu ul {
   list-style: none;
   display: flex;
@@ -45,18 +44,11 @@ nav.nav-menu ul li a:hover {
   color: #d97c5f;
 }
 
-/* ===== LOGIN SECTION ===== */
 .login-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: calc(100vh - 90px);
-}
-@media (max-width: 768px) {
-  nav.nav-menu ul {
-    flex-direction: column;
-    gap: 20px;
-  }
 }
 
 .login-box {
@@ -148,6 +140,13 @@ nav.nav-menu ul li a:hover {
 
 #footer-inn a:hover {
   color: #d97c5f;
+}
+
+@media (max-width: 768px) {
+  nav.nav-menu ul {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 @media (max-width: 768px) {
