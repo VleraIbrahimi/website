@@ -33,6 +33,12 @@ header {
     color: black;
     font-weight: 500;
     }
+    @media (max-width: 768px) {
+  nav.nav-menu ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
 
 .product-page {
   width: 80%;
