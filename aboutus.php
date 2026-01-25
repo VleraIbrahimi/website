@@ -1,3 +1,9 @@
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,14 +24,14 @@
       <nav class="nav-menu">
         <ul>
           <li><a href="#"><b>Home</b></a></li>
-          <li><a href="dermakozmetike.html"><b>DermaKozmetike</b></a></li>
-          <li><a href="mombliss.html"><b>Mom&Baby</b></a></li>
-          <li><a href="aboutus.html"><b>About Us</b></a></li>
+          <li><a href="dermakozmetike.php"><b>DermaKozmetike</b></a></li>
+          <li><a href="mombliss.php"><b>Mom&Baby</b></a></li>
+          <li><a href="aboutus.php"><b>About Us</b></a></li>
         </ul>
       </nav>
       <div class="header-icons">
         <i id="ikona-kerkimit" class="fa-solid fa-magnifying-glass"></i>
-        <a href="loginform.html"><i class="fa-solid fa-user"></i></a>
+        <a href="loginform.php"><i class="fa-solid fa-user"></i></a>
         <i class="fa-solid fa-cart-shopping"></i>
       </div>
     </div>
