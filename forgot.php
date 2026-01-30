@@ -1,3 +1,27 @@
+<?php
+session_start();
+include_once 'Database.php';
+include_once 'User.php';
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $db = new Database();
+    $connection = $db->getConnection();
+    $useri = new User($connection);
+
+    $email = $_POST['email'];
+    $newPassword = $_POST['password'];
+
+    if ($useri->forgot($email, $newPassword)) {
+        header("Location: loginform.php");
+        exit();
+    } else {
+        echo "Email nuk u gjet në sistem.";
+    }
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,14 +42,14 @@
       <nav class="nav-menu">
         <ul>
           <li><a href="#"><b>Home</b></a></li>
-          <li><a href="dermakozmetike.html"><b>DermaKozmetike</b></a></li>
-          <li><a href="mombliss.html"><b>Mom&Baby</b></a></li>
-          <li><a href="aboutus.html"><b>About Us</b></a></li>
+          <li><a href="dermakozmetike.php"><b>DermaKozmetike</b></a></li>
+          <li><a href="mombliss.php"><b>Mom&Baby</b></a></li>
+          <li><a href="aboutus.php"><b>About Us</b></a></li>
         </ul>
       </nav>
       <div class="header-icons">
         <i id="ikona-kerkimit" class="fa-solid fa-magnifying-glass"></i>
-        <a href="loginform.html"><i class="fa-solid fa-user"></i></a>
+        <a href="loginform.php"><i class="fa-solid fa-user"></i></a>
         <i class="fa-solid fa-cart-shopping"></i>
       </div>
     </div>
@@ -37,12 +61,14 @@
   <div class="login-box">
     <h2>Ke harruar fjalëkalimi?</h2>
 
-    <input type="email" placeholder="Emri i përdoruesit ose adresa e emailit ">
-
-    <button>Reseto Fjalëkalimin</button>
+    <form action="forgot.php" method="POST">
+    <input type="email" name="email" placeholder="Emri i përdoruesit ose adresa e emailit " required>
+    <input type="password" name="password" placeholder="Vendos fjalëkalimin e ri " required>
+    <button type="submit">Reseto Fjalëkalimin</button>
+</form>
 
     <div class="links">
-      <a href="loginform.html">Kthehu tek regjistrimi</a>
+      <a href="loginform.php">Kthehu tek regjistrimi</a>
     </div>
   </div>
   </div>
