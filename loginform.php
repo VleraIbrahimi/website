@@ -1,3 +1,36 @@
+<?php
+session_start();
+include_once 'Database.php';
+include_once 'User.php';
+
+if($_SERVER ['REQUEST_METHOD']=='POST'){
+  $db=new Database();
+  $connection=$db->getConnection();
+  $useri= new User(db: $connection);
+
+  $name=$_POST['name'];
+  $surname=$_POST['surname'];
+  $email=$_POST['email'];
+  $password=$_POST['password'];
+
+
+  if($useri->loginform(email: $email,password: $password)){
+    header(header: "Location: homepage.php");
+    exit;
+
+  }else{
+    echo "Invalid credentials";
+  }
+
+}
+
+
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,14 +51,14 @@
       <nav class="nav-menu">
         <ul>
           <li><a href="#"><b>Home</b></a></li>
-          <li><a href="dermakozmetike.html"><b>DermaKozmetike</b></a></li>
-          <li><a href="mombliss.html"><b>Mom&Baby</b></a></li>
-          <li><a href="aboutus.html"><b>About Us</b></a></li>
+          <li><a href="dermakozmetike.php"><b>DermaKozmetike</b></a></li>
+          <li><a href="mombliss.php"><b>Mom&Baby</b></a></li>
+          <li><a href="aboutus.php"><b>About Us</b></a></li>
         </ul>
       </nav>
       <div class="header-icons">
         <i id="ikona-kerkimit" class="fa-solid fa-magnifying-glass"></i>
-        <a href="loginform.html"><i class="fa-solid fa-user"></i></a>
+        <a href="loginform.php"><i class="fa-solid fa-user"></i></a>
         <i class="fa-solid fa-cart-shopping"></i>
       </div>
     </div>
@@ -35,14 +68,16 @@
   <div class="login-box">
     <h2>Kyçu</h2>
 
-    <input id="username" type="text" placeholder="Emri i përdoruesit ose adresa e emailit ">
-    <input id="password"  type="password" placeholder="Fjalëkalimi">
+    <form action="loginform.php" method="POST">
+    <input id="email" name="email" type="text" placeholder="Adresa e emailit ">
+    <input id="password" name="password" type="password" placeholder="Fjalëkalimi">
 
     <button id="submitBtn">Kyçu</button>
+    </form>
 
     <div class="links">
-      <a href="forgot.html">Ke harruar fjalëkalimi?</a>
-       <a href="signup.html">Regjistrohu</a>
+      <a href="forgot.php">Ke harruar fjalëkalimi?</a>
+       <a href="signup.php">Regjistrohu</a>
  
  </div>
   </div>
@@ -115,7 +150,6 @@
       return;
     }
 
-    // Nëse kalon validimin, forma mund të dërgohet (nëse ka form)
   });
 </script>
 </body>

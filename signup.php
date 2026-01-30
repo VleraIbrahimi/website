@@ -1,3 +1,31 @@
+<?php
+
+include_once 'Database.php';
+include_once 'User.php';
+
+if($_SERVER ['REQUEST_METHOD']=='POST'){
+  $db=new Database();
+  $connection=$db->getConnection();
+  $useri= new User(db: $connection);
+
+  $name=$_POST['name'];
+  $surname=$_POST['surname'];
+  $email=$_POST['email'];
+  $password=$_POST['password'];
+
+
+  if($useri->signup(name: $name,surname: $surname,email: $email,password: $password)){
+    header(header: "Location: loginform.php");
+    exit;
+
+  }else{
+    echo "ERROR registering user!";
+  }
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,14 +46,14 @@
       <nav class="nav-menu">
         <ul>
           <li><a href="#"><b>Home</b></a></li>
-          <li><a href="dermakozmetike.html"><b>DermaKozmetike</b></a></li>
-          <li><a href="mombliss.html"><b>Mom&Baby</b></a></li>
-          <li><a href="aboutus.html"><b>About Us</b></a></li>
+          <li><a href="dermakozmetike.php"><b>DermaKozmetike</b></a></li>
+          <li><a href="mombliss.php"><b>Mom&Baby</b></a></li>
+          <li><a href="aboutus.php"><b>About Us</b></a></li>
         </ul>
       </nav>
       <div class="header-icons">
         <i id="ikona-kerkimit" class="fa-solid fa-magnifying-glass"></i>
-        <a href="loginform.html"><i class="fa-solid fa-user"></i></a>
+        <a href="loginform.php"><i class="fa-solid fa-user"></i></a>
         <i class="fa-solid fa-cart-shopping"></i>
       </div>
     </div>
@@ -36,10 +64,11 @@
   <div class="login-box">
     <h2>Regjistrohu</h2>
     
-    <form id="signupForm">
-    <input id="username" type="text" placeholder="Emri i përdoruesit">
-    <input id="email" type="email" placeholder="Adresa e emailit">
-    <input id="password" type="password" placeholder="Fjalëkalimi">
+    <form action="signup.php" id="signupForm"  method="POST">
+    <input id="name" name="name" type="text" placeholder="Emri i përdoruesit">
+    <input id="surname" name="surname" type="text" placeholder="Mbiemri i përdoruesit">
+    <input id="email" name="email" type="email" placeholder="Adresa e emailit">
+    <input id="password" name="password" type="password" placeholder="Fjalëkalimi">
 
     <button id="submitBtn" type="submit">Regjistrohu</button>
 </form>

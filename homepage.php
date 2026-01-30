@@ -1,3 +1,15 @@
+<?php
+session_start();
+if(!isset($_SESSION['user_id'])){
+  header(header: "Location: loginform.php");
+  exit;
+
+}
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,9 +32,9 @@
       <nav class="nav-menu">
         <ul>
           <li><a href="#"><b>Home</b></a></li>
-          <li><a href="dermakozmetike.html"><b>DermaKozmetike</b></a></li>
-          <li><a href="mombliss.html"><b>Mom&Baby</b></a></li>
-          <li><a href="aboutus.html"><b>About Us</b></a></li>
+          <li><a href="dermakozmetike.php"><b>DermaKozmetike</b></a></li>
+          <li><a href="mombliss.php"><b>Mom&Baby</b></a></li>
+          <li><a href="aboutus.php"><b>About Us</b></a></li>
         </ul>
       </nav>
       <div class="header-icons">
@@ -131,19 +143,19 @@
     <div class="container">
       <div class="kategoria-grid">
         <div class="kategoria-item">
-          <a href="dermakozmetike.html">
+          <a href="dermakozmetike.php">
           <img src="dermokozmetike1.jpg" alt="Category 1" />
           </a>
         </div>
 
         <div class="kategoria-item">
-          <a href="mombliss.html">
+          <a href="mombliss.php">
           <img src="mom.png" alt="Category 2" />
           </a>
         </div>
 
         <div class="kategoria-item">
-          <a href="suplimente.html">
+          <a href="suplimente.php">
           <img src="supplements.jpg" alt="Category 3" />
           </a>
         </div>
@@ -198,19 +210,19 @@
     <div class="container"></div>
       <div class="kategoria-grid">
         <div class="kategoria-item">
-          <a href="babyfood.html">
+          <a href="babyfood.php">
           <img src="babyfoood.jpg" alt="Category 1" />
           </a>
         </div>
 
         <div class="kategoria-item">
-          <a href="pregnancy.html">
+          <a href="pregnancy.php">
           <img src="pregnancy.jpg" alt="Category 2" />
           </a>
         </div>
 
         <div class="kategoria-item">
-          <a href="babyhygiene.html">
+          <a href="babyhygiene.php">
           <img src="babyhygine.jpg" alt="Category 3" />
           </a>
         </div>
@@ -226,28 +238,28 @@
 
       <div class="products-grid">
         <div class="product-card">
-          <a href="home1.html">
+          <a href="home1.php">
           <img src="maqine.png" alt="Product 1" />
           <p>Babymoov Nutribaby One 4-in-1 Food Prep Maker – Qelqi</p>
           <h3>€50.90</h3>
           </a>
         </div>
         <div class="product-card">
-          <a href="home2.html">
+          <a href="home2.php">
           <img src="set.png" alt="Product 2" />
           <p>Moonkie First Bites Gift Set</p>
           <h3>€120.00</h3>
           </a>
         </div>
         <div class="product-card">
-          <a href="home3.html">
+          <a href="home3.php">
           <img src="jastek.png" alt="Product 3" />
           <p>Momcozy Adjustable Nursing Pillow– Muted/Pink</p>
           <h3>€75.63</h3>
           </a>
         </div>
         <div class="product-card">
-          <a href="home4.html">
+          <a href="home4.php">
           <img src="krem.png" alt="Product 3" />
           <p>Embryolisse Lait-Crème Retinol-Like 75 ml</p>
           <h3>€25.50</h3>
