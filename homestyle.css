@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
 body {
   font-family: Arial, sans-serif;
@@ -9,55 +10,68 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
 header {
   background: #fff;
-  border-bottom: 1px solid #eee;
-  padding: 0 15px ;
-}
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-}
-.logo img {
-  text-align: left;
-}
-nav.nav-menu ul {
-  list-style: none;
-  display: flex ;
-  gap:100px;  
-  align-items: center;
-  padding: 0;
-  margin: 0;
+  border-bottom: 1px solid #e5e5e5;
+  width: 100%;
 }
 
-nav.nav-menu ul li a {
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-}
-/* HEADER ICONS*/
-.header-icons {
+.header-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 15px 30px;
+
   display: flex;
   align-items: center;
-  gap: 20px;
+}
+
+.logo img {
+  height:60px;
+  object-fit: contain;
+}
+
+.nav-menu {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap:78px;
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 15px;
+  font-weight: 500;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+.header-icons {
+  display: flex;
+  gap: 25px;
+  align-items: center;
 }
 
 .header-icons i {
   font-size: 20px;
-  color: #000;
+  color: #333;
   cursor: pointer;
-  transition: 0.3s;
+  transition: color 0.3s ease;
 }
+nav.nav-menu ul li a:hover {
+  color: #d97c5f;
+} 
+
 
 .header-icons i:hover {
   color: #007bff;
 }
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 
  * {
   margin: 0;
@@ -68,9 +82,9 @@ nav.nav-menu ul li a {
 
 /* KARUSELI */
 .carousel {
-  width: 1510px;       /* gjerësia që dëshiron */
-  max-width: 100%;     /* për responsive */
-  height: 600px;       /* po e ruaj lartësinë tënde */
+  width: 1510px;    
+  max-width: 100%;   
+  height: 600px;    
   margin:1px auto 40px auto;
   overflow: hidden;
   position: relative;
@@ -78,9 +92,9 @@ nav.nav-menu ul li a {
 }
 
 .carousel img {
-  width: 1510px;       /* imazhet me gjerësinë që do */
-  max-width: 100%;     /* responsive */
-  height: 600px;       /* përshtatet me carousel */
+  width: 1510px;      
+  max-width: 100%;    
+  height: 600px;       
   object-fit: cover;
   position: absolute;
   top: 0; left: 0;
@@ -94,12 +108,8 @@ nav.nav-menu ul li a {
 }
 
 
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
-.metodat{
+/* .metodat{
   display: flex;
   justify-content: space-between;
   gap: 5px;
@@ -122,7 +132,48 @@ nav.nav-menu ul li a {
 .metodat a{
   text-decoration: none;
   color: black;
+} */
+.metodat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 1400px;
+  margin: 40px auto;
+  padding: 25px 20px;
 }
+
+.metod-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+}
+
+.metod-item img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  opacity: 0.6; /* ikonë si në foto */
+}
+
+.metod-item span {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #000;
+}
+
+.metod-item a {
+  text-decoration: none;
+  color: #000;
+}
+
+.metod-item a:hover {
+  text-decoration: underline;
+}
+
+
+
 
 .kategoria {
   padding: 60px 0;
@@ -161,57 +212,58 @@ nav.nav-menu ul li a {
   padding: 40px 0;
   background-color: #fff;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 
 
-.featured-item1 img {
-  width: 125px;
-  height: 125px;
-  object-fit: cover;
-  border-radius: 50%;
-  background: #f7f7f7;
-  padding: 12px;
-  transition: transform 0.25s ease;
-}
-
-.featured-item1 h4 {
-  margin-top: 10px;
-  font-size: 18px;
-  font-weight: 600;
-  color: #333;
-}
-
-
-
-.rrethore h4:first-of-type {
-  white-space: nowrap; /* Bën që titulli kryesor të jetë në një rresht */
-  margin-top: 150px;
-}
-
-.rrethore-grid {
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+} 
+/* RRETHORE */
+.rrethore {
+  padding: 60px 0;
 }
-.rrethore .teksti{
+
+.rrethore-layout {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.teksti {
+  min-width: 260px;
+  text-align: left;
+}
+
+.rrethore-grid {
+  display: flex;
+  gap: 40px;
+}
+
+.rrethore-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rrethore-item h4 {
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.rrethore-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+/* .rrethore .teksti{
   text-align:center;
   margin-top: 50px;
 }
 
-.rrethore-grid {
->>>>>>> f1198fa54c9e401ae9b80e4f01abc1021525c546
-=======
    .rrethore-grid{
->>>>>>> Stashed changes
-=======
-   .rrethore-grid{
->>>>>>> Stashed changes
-=======
-   .rrethore-grid{
->>>>>>> Stashed changes
   display: flex;
   justify-content: center;
   gap: 40px;
@@ -239,13 +291,8 @@ nav.nav-menu ul li a {
   color: #555;
   white-space: normal;
   margin: 0;
-}
+} */
 
-
-
-
-
-/* Products */
 .products {
   padding: 60px 0;
 }
@@ -281,11 +328,15 @@ nav.nav-menu ul li a {
   margin-bottom:10px;
   text-align: center;
 }
+.product-card a{
+  text-decoration: none;
+  color: black;
+}
 
 .video-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 video në një rresht */
-    gap: 15px; /* hapësira mes tyre */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 15px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -338,5 +389,128 @@ color: black;
 
 .footer-inner p{
   text-align: left;
+}
+@media (max-width: 768px) {
+
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 15px;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+
+  nav.nav-menu {
+    width: 100%;
+  }
+
+  nav.nav-menu ul {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  nav.nav-menu ul li a {
+    font-size: 14px;
+  }
+
+  .header-icons {
+    gap: 18px;
+  }
+
+  .carousel {
+    height: 300px;
+    margin-bottom: 20px;
+  }
+
+  .carousel img {
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .metodat {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .metod-item {
+    justify-content: center;
+  }
+
+  .rrethore-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .teksti {
+    text-align: center;
+  }
+
+  .rrethore-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .rrethore-item {
+    width: 140px;
+  }
+
+  .kategoria-grid {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .kategoria-item {
+    max-width: 100%;
+  }
+
+  .products-grid {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .product-card {
+    width: 100%;
+  }
+
+  .product-card p {
+    font-size: 16px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    height: auto;
+  }
+
+  #footer-inn {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav.nav-menu ul {
+    flex-wrap: wrap;
+  }
+
+  .rrethore-item {
+    width: 120px;
+  }
+
+  .carousel {
+    height: 220px;
+  }
+
+  .carousel img {
+    height: 220px;
+  }
 }
 

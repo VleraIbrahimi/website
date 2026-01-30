@@ -1,0 +1,105 @@
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="aboutus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="container header-inner">
+      <div class="logo">
+        <a href="#"><img src="LOGO.png" alt="Materné Logo" /></a>
+      </div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="#"><b>Home</b></a></li>
+          <li><a href="dermakozmetike.php"><b>DermaKozmetike</b></a></li>
+          <li><a href="mombliss.php"><b>Mom&Baby</b></a></li>
+          <li><a href="aboutus.php"><b>About Us</b></a></li>
+        </ul>
+      </nav>
+      <div class="header-icons">
+        <i id="ikona-kerkimit" class="fa-solid fa-magnifying-glass"></i>
+        <a href="loginform.php"><i class="fa-solid fa-user"></i></a>
+        <i class="fa-solid fa-cart-shopping"></i>
+      </div>
+    </div>
+  </header>
+    <div class="section">
+         <div class="container">
+
+             <div class="teksti">
+                <div class="titulli">
+                    <h1>Farmacia e Familjes!</h1>
+                </div>
+
+                <div class="pershkrimi">
+                    <p>MaternéPharma është më shumë se thjesht një farmaci, është destinacioni i besuar për gratë,
+                         nënat, foshnjat dhe familjet që kërkojnë produkte me cilësi të lartë për shëndetin dhe mirëqenien e tyre. 
+                         E themeluar në vitin 2024, misioni ynë është të sigurojmë që prindërit të kenë akses në më të mirën në kujdesin për fëmijën, 
+                         gjërat thelbësore të shtatzënisë, dermokozmetikën dhe farmaceutikën.
+                         Frymëzuar nga rrugëtimi personal i mëmësisë, 
+                         BlissPharma kupton sfidat me të cilat përballen prindërit në gjetjen e produkteve të sigurta, efektive dhe të besueshme. Kjo është arsyeja pse ne kurojmë me kujdes përzgjedhjen tonë, duke ofruar vetëm produktet më të mira për çdo fazë të jetës, duke mbështetur si nënat ashtu edhe gratë në rrugëtimin e tyre të kujdesit për veten.
+                        Me një dyqan fizik në Tiranë dhe një platformë online, ne jemi të përkushtuar ndaj komoditetit,
+                         cilësisë dhe kujdesit, sepse çdo familje meriton më të mirën.</p>
+                        <h4><b>MaternéPharma – Për nënat, për gratë, për ju.</b></h4>
+                </div>
+            </div>
+
+                <div class="imazhi">
+                    <img src="emblem.png" alt="">
+                </div>
+        </div>
+  </div>
+
+<footer id="main-footer">
+  <div class="footer">
+    <div class="footer-inner">
+      <p>© 2024 MaternéPharma. All rights reserved.</p>
+    </div>
+
+    <div id="footer-inn">
+          <div class="pjesa1">
+      <ul>
+        <li type="none"> <b>Adresa dhe Orari</b></li>
+        <br>
+        <li type="none">Prishtine,Kosova</li>
+        <li type="none">E hene-E Dielle</li>
+        <li type="none">08:00-22:00</li>
+      </ul>
+    </div>
+
+    <div class="pjesa1">
+      <ul>
+        <li type="none"> <b>Kontakti</b></li>
+        <br>
+        <li type="none">+383 44123456</li>
+        <li type="none">Info@maternepharama.ks</li>
+      </ul>
+    </div>
+
+    <div class="pjesa1">
+      <ul>
+        <li type="none"><b>Rrjetet sociale</b></li>
+        <br>
+        <li type="none"><a href="https://www.instagram.com/ubt_official/?hl=en">Instagram</a></li>
+        <li type="none"><a href="https://www.tiktok.com/@ubt.official">TikTok</a></li>
+      </ul>
+    </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
