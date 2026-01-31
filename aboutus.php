@@ -1,8 +1,14 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+require_once 'Database.php';
+require_once 'PageContent.php';
+
+$db = new Database();
+$connection = $db->getConnection();
+
+$contentObj = new PageContent($connection);
+$extraSentence = $contentObj->getContent('about_us', 'extra_sentence');
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -54,6 +60,11 @@ error_reporting(E_ALL);
                         Me një dyqan fizik në Tiranë dhe një platformë online, ne jemi të përkushtuar ndaj komoditetit,
                          cilësisë dhe kujdesit, sepse çdo familje meriton më të mirën.</p>
                         <h4><b>MaternéPharma – Për nënat, për gratë, për ju.</b></h4>
+
+                        <?php if (!empty($extraSentence)) : ?>
+                        <p><?= htmlspecialchars($extraSentence) ?></p>
+                        <?php endif; ?>
+
                 </div>
             </div>
 
