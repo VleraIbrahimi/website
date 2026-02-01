@@ -45,5 +45,20 @@
 
 
      </table>
+
+<table>
+    <tr>
+        <th>ID</th><th>Name</th><th>Email</th><th>Birthday</th><th>Gender</th>
+    </tr>
+    <?php foreach ($users as $u): ?>
+    <tr>
+        <td><?= $u['userID'] ?></td>
+        <td><?= $u['name'] ?></td>
+        <td><?= $u['surname'] ?></td>
+        <td><?= $u['email'] ?></td>
+        <td><?= $u['password'] ?></td>
+    </tr>
+    <?php endforeach; ?>
+</table>
 </body>
 </html>

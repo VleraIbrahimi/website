@@ -23,6 +23,12 @@
           <li><a href="dermakozmetike.html"><b>DermaKozmetike</b></a></li>
           <li><a href="mombliss.html"><b>Mom&Baby</b></a></li>
           <li><a href="aboutus.html"><b>About Us</b></a></li>
+          <?php
+         
+         if(($_SESSION['role'] ?? '') === 'admin') {
+                    echo '<a href="dashboard.php">Dashboard</a>';
+                }
+          ?>
         </ul>
       </nav>
       <div class="header-icons">

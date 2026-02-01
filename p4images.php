@@ -1,3 +1,9 @@
+<?php
+
+  include_once 'Database.php';
+  include_once 'ProductRepository.php'
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,6 +62,31 @@
 
         <button class="cart">Shto Ne Shporte</button>
       </div>
+
+      <?php foreach($products as $product): ?>
+          <div class="imazhi">
+          <img src="images4.png" alt="">
+        </div>
+
+        <div class="info">
+          <h2>Momcozy Pregnancy Belly</h2>
+
+          <div class="cmimi">
+              <span class="price">€43.50</span>
+          </div>
+
+          <p id="pershkrimi">
+          Brezi i barkut Momcozy ofron mbështetje të butë dhe të padukshme për barkun gjatë shtatzënisë, duke siguruar rehati të përditshme dhe lehtësim nga shqetësimet.
+          </p>
+          <div class="butonat">
+              <button>-</button>
+              <input type="text" value="1"/>
+              <button>+</button>
+          </div>
+
+          <button class="cart">Shto Ne Shporte</button>
+        </div>
+      <?php endforeach; ?>
 
     </section>
 

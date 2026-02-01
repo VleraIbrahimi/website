@@ -15,8 +15,8 @@ class ProductRepository implements IProductRepository
       public function insertProduct($product){
          $con = $this->connection;
 
-         $sql = "INSERT INTO product (name,description,quantity,price)
-                  VALUES (?,?,?,?)";
+         $sql = "INSERT INTO product (name,description,quantity,price,image)
+                  VALUES (?,?,?,?,?)";
 
              //ID ESHTE AUTO INCREMENT
 
@@ -26,6 +26,7 @@ class ProductRepository implements IProductRepository
             $product -> getDescription();
             $product -> getQuantity();
             $product -> getPrice();
+            $product -> getImage();
           ])
           
 
