@@ -28,7 +28,6 @@ class User{
 
     public function loginform($email,$password):bool{
         $query="SELECT id,name,surname,email,password FROM {$this->table_name} WHERE email=:email";
-
         $stmt = $this->conn->prepare ($query);
 
         $stmt->bindParam(':email',$email);
@@ -50,6 +49,31 @@ class User{
 
 
     }
+
+    public function forgot($email, $new_password){
+
+    $query = "SELECT id FROM {$this->table_name} WHERE email = :email LIMIT 1";
+    $stmt = $this->conn->prepare($query);
+    $stmt->bindParam(':email', $email);
+    $stmt->execute();
+
+    if($stmt->rowCount() > 0){
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+    } else {
+        return false;
+    }
+
+    $hashed_password = password_hash($new_password, PASSWORD_DEFAULT);
+
+    $update = "UPDATE {$this->table_name} SET password = :password WHERE id = :id";
+    $stmt = $this->conn->prepare($update);
+    $stmt->bindParam(':password', $hashed_password);
+    $stmt->bindParam(':id', $user['id']);
+    $stmt->execute();
+
+    return true;
+}
+
 
 
 }
